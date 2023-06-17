@@ -131,3 +131,85 @@ print("Maximal Rectangle Area:", area)
 > - Với mỗi phần tử trong hàng hiện tại, ta xem nó như là đỉnh của một hình chữ nhật có chiều cao tương ứng trong mảng chiều cao.
 > - Với mỗi đỉnh, ta tính toán chiều rộng của hình chữ nhật bằng cách duyệt sang trái và sang phải từ đỉnh đó, đến khi gặp một chiều cao nhỏ hơn đỉnh hoặc đến cột đầu tiên hoặc cột cuối cùng.
 > - Với mỗi hình chữ nhật được tính toán, ta so sánh diện tích với diện tích tối đa hiện tại và cập nhật nếu diện tích mới tìm được lớn hơn.
+
+## Bài toán chứa nhiều ký tự khác nhau
+
+<img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t39.30808-6/354064454_954295605691094_3765286956672078844_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=8HIzEoPP3jcAX8LnkK0&_nc_ht=scontent.fsgn5-2.fna&oh=00_AfDs9CxytbAWyvHv_kPlCkOdW9qTAmTvUrVDMTFjbubyjw&oe=6491B980" alt="vidu" width="60%" />
+
+## 
+<img src="https://cdn.programiz.com/sites/tutorial2program/files/pc_logo.svg" att="programiz" width= "25%" />
+
+```
+def find_largest_rectangle(matrix, char):
+    rows = len(matrix)
+    if rows == 0:
+        return None
+    cols = len(matrix[0])
+    
+    # Tạo mảng chiều cao của các cột
+    heights = [0] * cols
+    max_area = 0
+    top, left, bottom, right = 0, 0, 0, 0
+    
+    for row in range(rows):
+        # Cập nhật chiều cao của các cột dựa trên ký tự char
+        for col in range(cols):
+            if matrix[row][col] == char:
+                heights[col] += 1
+            else:
+                heights[col] = 0
+        
+        # Áp dụng thuật toán tìm hình chữ nhật cực đại trong histogram
+        stack = []
+        for i in range(cols + 1):
+            while stack and (i == cols or heights[stack[-1]] > heights[i]):
+                h = heights[stack.pop()]
+                w = i if not stack else i - stack[-1] - 1
+                area = h * w
+                if area > max_area:
+                    max_area = area
+                    top = row - h + 1
+                    left = stack[-1] + 1 if stack else 0
+                    bottom = row
+                    right = i - 1
+        
+            stack.append(i)
+    
+    if max_area == 0:
+        return None
+    else:
+        return (top, left, bottom, right)
+
+def print_rectangle(matrix, rectangle):
+    top, left, bottom, right = rectangle
+    for i in range(top, bottom + 1):
+        row = matrix[i][left:right + 1]
+        print(row)
+
+matrix = [
+    "bbsbmaacccaabbfbbbb",
+    "mbvhbcccccccbbgbbvb",
+    "xbkkbcccccccbbgbvvb",
+    "cbhbbcccccccbbtbxxb",
+    "vbmbbcccccccbbtrrbb",
+    "zbnbbcccccccbbtqqbb"
+]
+
+char = 'c'
+rectangle = find_largest_rectangle(matrix, char)`
+if rectangle is not None:
+    print("Hình chữ nhật cực đại tạo bởi ký tự '{}' là:".format(char))
+    print_rectangle(matrix, rectangle)
+else:
+    print("Không tìm thấy hình chữ nhật cực đại tạo bởi ký tự '{}'".format(char))
+```
+[RUN](https://www.programiz.com/python-programming/online-compiler/) 
+> kết quả:
+```
+ccccccc
+ccccccc
+ccccccc
+ccccccc
+ccccccc
+```
+
