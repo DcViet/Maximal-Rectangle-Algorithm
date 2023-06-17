@@ -142,7 +142,6 @@ cách 1: sử dụng stack | cách 2: dùng quy hoạch động
 
 >cách 1: [mã giải](source/Stack.md) | [dịch](https://www.programiz.com/python-programming/online-compiler/) 
 
-
 > kết quả:
 ```
 Ma trận ban đầu:
@@ -165,3 +164,19 @@ Vị trí các đỉnh:
 ```
 
 >cách 2: [mã giải](/source/noStack.md) | [dịch](https://www.programiz.com/python-programming/online-compiler/) 
+
+> kết quả:
+```
+Ký tự lớn nhất là 'c'
+Tọa độ 4 điểm của hình chữ nhật:
+Điểm 1: Hàng: 2, Cột: 6
+Điểm 2: Hàng: 2, Cột: 12
+Điểm 3: Hàng: 6, Cột: 6
+Điểm 4: Hàng: 6, Cột: 12
+Ma trận hình chữ nhật cực đại:
+c c c c c c c 
+c c c c c c c 
+c c c c c c c 
+c c c c c c c 
+c c c c c c c
+```
