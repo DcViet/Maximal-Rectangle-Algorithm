@@ -3,7 +3,7 @@
 "Thuật toán hình chữ nhật tối đại" (Maximal Rectangle Algorithm) : Thuật toán này áp dụng cơ chế quy hoạch động để tìm kiếm hình chữ nhật lớn nhất.
 - Ý tưởng chính của thuật toán là xem mỗi hàng trong ma trận như một đường đơn giản và áp dụng thuật toán:
 ##
-1. Sử dụng "[Largest Rectangle in Histogram](https://github.com/DcViet/Algorithm/blob/main/assets/Largest_Histogram.md)" trên các hàng để tìm kiếm hình chữ nhật lớn nhất.
+1. Sử dụng thuật toán "[Largest Rectangle in Histogram](https://github.com/DcViet/Algorithm/blob/main/assets/Largest_Histogram.md)" trên các hàng để tìm kiếm hình chữ nhật lớn nhất.
 ```
 def maximal_rectangle(matrix):
     if not matrix:
@@ -51,7 +51,7 @@ print("Maximal Rectangle Area:", area)
 > 6. Lặp lại quá trình trên cho tất cả các hàng trong ma trận.
 > 7. Trả về diện tích lớn nhất tìm được.
 ##
-2. Tính toán chiều rộng và chiều cao của các hình chữ nhật con: duyệt qua từng hàng của ma trận và tính toán chiều rộng của hình chữ nhật tối đại kết thúc tại mỗi cột. Sau đó, ta tính toán diện tích của hình chữ nhật tối đại dựa trên chiều rộng và chiều cao đã tính toán.
+2. Sử dụng thuật toán "Dynamic Programming" (quy hoạch động): Tính toán chiều rộng và chiều cao của các hình chữ nhật con: duyệt qua từng hàng của ma trận và tính toán chiều rộng của hình chữ nhật tối đại kết thúc tại mỗi cột. Sau đó, ta tính toán diện tích của hình chữ nhật tối đại dựa trên chiều rộng và chiều cao đã tính toán.
 
 ```
 def maximal_rectangle(matrix):
@@ -136,8 +136,10 @@ print("Maximal Rectangle Area:", area)
 
 <img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t39.30808-6/354064454_954295605691094_3765286956672078844_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=8HIzEoPP3jcAX8LnkK0&_nc_ht=scontent.fsgn5-2.fna&oh=00_AfDs9CxytbAWyvHv_kPlCkOdW9qTAmTvUrVDMTFjbubyjw&oe=6491B980" alt="vidu" width="60%" />
 
+cách 1: sử dụng stack | cách 2: dùng quy hoạch động
 <img src="https://cdn.programiz.com/sites/tutorial2program/files/pc_logo.svg" att="programiz" width= "25%" />
 
+>cách 1
 [mã giải](code.md) | [dịch](https://www.programiz.com/python-programming/online-compiler/) 
 
 
