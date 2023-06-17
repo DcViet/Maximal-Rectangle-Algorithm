@@ -137,9 +137,11 @@ print("Maximal Rectangle Area:", area)
 <img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t39.30808-6/354064454_954295605691094_3765286956672078844_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=8HIzEoPP3jcAX8LnkK0&_nc_ht=scontent.fsgn5-2.fna&oh=00_AfDs9CxytbAWyvHv_kPlCkOdW9qTAmTvUrVDMTFjbubyjw&oe=6491B980" alt="vidu" width="60%" />
 
 cách 1: sử dụng stack | cách 2: dùng quy hoạch động
+
 <img src="https://cdn.programiz.com/sites/tutorial2program/files/pc_logo.svg" att="programiz" width= "25%" />
 
 >cách 1
+
 [mã giải](code.md) | [dịch](https://www.programiz.com/python-programming/online-compiler/) 
 
 
