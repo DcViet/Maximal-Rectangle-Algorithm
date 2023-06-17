@@ -139,7 +139,7 @@ print("Maximal Rectangle Area:", area)
 ## 
 <img src="https://cdn.programiz.com/sites/tutorial2program/files/pc_logo.svg" att="programiz" width= "25%" />
 
-{@gist: Gist ID or URL}
+{@gist: code.md}
 [RUN](https://www.programiz.com/python-programming/online-compiler/) 
 > kết quả:
 ```
