@@ -120,4 +120,14 @@ matrix = [
 area = maximal_rectangle(matrix)
 print("Maximal Rectangle Area:", area)
 ```
-> sử dụng một mảng heights để lưu chiều cao của các cột trong hàng hiện tại. Sau đó, chúng ta tính toán chiều rộng của hình chữ nhật tối đại kết thúc tại mỗi cột bằng cách sử dụng hai mảng left và right để lưu vị trí của cột bên trái và bên phải. Cuối cùng, chúng ta tính toán diện tích của hình chữ nhật dựa trên chiều rộng và chiều cao đã tính toán.
+> Bước 1: Tính toán chiều cao của từng cột trong ma trận.
+> - Khởi tạo một mảng có cùng kích thước với số cột trong ma trận, ban đầu tất cả các phần tử đều bằng 0.
+> - Duyệt qua từng hàng của ma trận.
+> - Với mỗi phần tử ở hàng hiện tại và cột tương ứng, nếu nó là '1', tăng giá trị của phần tử tại cột đó trong mảng chiều cao lên 1. Nếu nó là '0', đặt giá trị của phần tử tại cột đó trong mảng chiều cao về 0.
+
+> Bước 2: Xác định hình chữ nhật tối đại.
+> - Duyệt qua từng hàng của ma trận.
+> - Đối với hàng hiện tại, sử dụng mảng chiều cao đã tính ở Bước 1 để xác định chiều cao của hình chữ nhật tối đại mà có hàng hiện tại là hàng đáy.
+> - Với mỗi phần tử trong hàng hiện tại, ta xem nó như là đỉnh của một hình chữ nhật có chiều cao tương ứng trong mảng chiều cao.
+> - Với mỗi đỉnh, ta tính toán chiều rộng của hình chữ nhật bằng cách duyệt sang trái và sang phải từ đỉnh đó, đến khi gặp một chiều cao nhỏ hơn đỉnh hoặc đến cột đầu tiên hoặc cột cuối cùng.
+> - Với mỗi hình chữ nhật được tính toán, ta so sánh diện tích với diện tích tối đa hiện tại và cập nhật nếu diện tích mới tìm được lớn hơn.
