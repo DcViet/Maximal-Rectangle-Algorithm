@@ -139,23 +139,27 @@ print("Maximal Rectangle Area:", area)
 ## 
 <img src="https://cdn.programiz.com/sites/tutorial2program/files/pc_logo.svg" att="programiz" width= "25%" />
 
-
-{@gist: https://gist.github.com/24e3f8ba3d4b8936d08864fa25139269.git}
+[dịch](https://www.programiz.com/python-programming/online-compiler/) 
 
 [mã giải](code.md)
-
-
-https://gist.githubusercontent.com/DcViet/24e3f8ba3d4b8936d08864fa25139269/raw/f1a34d2740f51f1da99fdf4299163832cf88f960/hinhchunhat_cucdai.py
-
-[LABEL](https://gist.github.com/DcViet/24e3f8ba3d4b8936d08864fa25139269)
-
-[RUN](https://www.programiz.com/python-programming/online-compiler/) 
 > kết quả:
 ```
-ccccccc
-ccccccc
-ccccccc
-ccccccc
-ccccccc
+Ma trận ban đầu:
+bbsbmaacccaabbfbbbb
+mbvhbcccccccbbgbbvb
+xbkkbcccccccbbgbvvb
+cbhbbcccccccbbtbxxb
+vbmbbcccccccbbtrrbb
+zbnbbcccccccbbtqqbb
+
+Thông tin về hình chữ nhật cực đại:
+Ký tự: c
+Diện tích: 35
+Vị trí các đỉnh:
+Đỉnh 1: Hàng 2, Cột 6
+Đỉnh 2: Hàng 6, Cột 6
+Đỉnh 3: Hàng 6, Cột 12
+Đỉnh 4: Hàng 2, Cột 12
+
 ```
 
