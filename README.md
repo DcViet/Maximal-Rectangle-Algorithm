@@ -140,9 +140,7 @@ cách 1: sử dụng stack | cách 2: dùng quy hoạch động
 
 <img src="https://cdn.programiz.com/sites/tutorial2program/files/pc_logo.svg" att="programiz" width= "25%" />
 
->cách 1
-
-[mã giải](code.md) | [dịch](https://www.programiz.com/python-programming/online-compiler/) 
+>cách 1: [mã giải](code.md) | [dịch](https://www.programiz.com/python-programming/online-compiler/) 
 
 
 > kết quả:
@@ -166,3 +164,4 @@ Vị trí các đỉnh:
 
 ```
 
+>cách 2: [mã giải](code.md) | [dịch](https://www.programiz.com/python-programming/online-compiler/) 
