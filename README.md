@@ -139,70 +139,7 @@ print("Maximal Rectangle Area:", area)
 ## 
 <img src="https://cdn.programiz.com/sites/tutorial2program/files/pc_logo.svg" att="programiz" width= "25%" />
 
-```
-def find_largest_rectangle(matrix, char):
-    rows = len(matrix)
-    if rows == 0:
-        return None
-    cols = len(matrix[0])
-    
-    # Tạo mảng chiều cao của các cột
-    heights = [0] * cols
-    max_area = 0
-    top, left, bottom, right = 0, 0, 0, 0
-    
-    for row in range(rows):
-        # Cập nhật chiều cao của các cột dựa trên ký tự char
-        for col in range(cols):
-            if matrix[row][col] == char:
-                heights[col] += 1
-            else:
-                heights[col] = 0
-        
-        # Áp dụng thuật toán tìm hình chữ nhật cực đại trong histogram
-        stack = []
-        for i in range(cols + 1):
-            while stack and (i == cols or heights[stack[-1]] > heights[i]):
-                h = heights[stack.pop()]
-                w = i if not stack else i - stack[-1] - 1
-                area = h * w
-                if area > max_area:
-                    max_area = area
-                    top = row - h + 1
-                    left = stack[-1] + 1 if stack else 0
-                    bottom = row
-                    right = i - 1
-        
-            stack.append(i)
-    
-    if max_area == 0:
-        return None
-    else:
-        return (top, left, bottom, right)
-
-def print_rectangle(matrix, rectangle):
-    top, left, bottom, right = rectangle
-    for i in range(top, bottom + 1):
-        row = matrix[i][left:right + 1]
-        print(row)
-
-matrix = [
-    "bbsbmaacccaabbfbbbb",
-    "mbvhbcccccccbbgbbvb",
-    "xbkkbcccccccbbgbvvb",
-    "cbhbbcccccccbbtbxxb",
-    "vbmbbcccccccbbtrrbb",
-    "zbnbbcccccccbbtqqbb"
-]
-
-char = 'c'
-rectangle = find_largest_rectangle(matrix, char)`
-if rectangle is not None:
-    print("Hình chữ nhật cực đại tạo bởi ký tự '{}' là:".format(char))
-    print_rectangle(matrix, rectangle)
-else:
-    print("Không tìm thấy hình chữ nhật cực đại tạo bởi ký tự '{}'".format(char))
-```
+{@gist: Gist ID or URL}
 [RUN](https://www.programiz.com/python-programming/online-compiler/) 
 > kết quả:
 ```
